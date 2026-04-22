@@ -138,6 +138,59 @@ body { background: #000000; color: #FFFFFF; font-family: 'Georgia', serif; min-h
 .closing-q.sel-cq { background: rgba(0,194,255,0.08); border-color: #00C2FF; }
 .closing-q .cq-text { font-size: 15px; font-family: ‘Helvetica Neue’, sans-serif; color: rgba(255,255,255,0.85); }
 .closing-q.sel-cq .cq-text { color: #00C2FF; font-weight: 700; }
+
+/* DYNAMIC SUMMARY */
+.sum-wrap { display: flex; flex-direction: column; height: 100%; gap: 16px; }
+.sum-header { display: flex; align-items: center; justify-content: space-between; padding-bottom: 14px; border-bottom: 1px solid rgba(255,255,255,0.10); flex-shrink: 0; }
+.sum-brand-name { font-size: 32px; font-weight: normal; line-height: 1.1; }
+.sum-brand-name span { color: #00C2FF; }
+.sum-hrs-badge { text-align: right; }
+.sum-hrs-num { font-size: 44px; color: #00C2FF; font-family: ‘Helvetica Neue’, sans-serif; font-weight: 700; line-height: 1; text-shadow: 0 0 20px rgba(0,194,255,0.5); }
+.sum-hrs-label { font-size: 11px; color: rgba(255,255,255,0.5); font-family: ‘Helvetica Neue’, sans-serif; letter-spacing: 1px; text-transform: uppercase; }
+.sum-cols { display: flex; gap: 20px; flex: 1; }
+.sum-col { flex: 1; display: flex; flex-direction: column; gap: 10px; }
+.sum-col-title { font-size: 10px; letter-spacing: 2.5px; text-transform: uppercase; font-family: ‘Helvetica Neue’, sans-serif; font-weight: 700; padding-bottom: 8px; border-bottom: 1px solid rgba(255,255,255,0.08); }
+.sum-col-title.t-pain { color: #FF8C00; border-color: rgba(255,140,0,0.3); }
+.sum-col-title.t-tools { color: #00C2FF; border-color: rgba(0,194,255,0.3); }
+.sum-col-title.t-build { color: #00E096; border-color: rgba(0,224,150,0.3); }
+.sum-items { display: flex; flex-direction: column; gap: 7px; }
+.sum-item { font-size: 13px; font-family: ‘Helvetica Neue’, sans-serif; padding: 8px 12px; border-radius: 10px; line-height: 1.3; }
+.sum-item-pain { background: rgba(255,140,0,0.08); border: 1px solid rgba(255,140,0,0.2); color: rgba(255,255,255,0.85); }
+.sum-item-tool { background: rgba(0,194,255,0.08); border: 1px solid rgba(0,194,255,0.2); color: rgba(255,255,255,0.85); }
+.sum-item-build-1 { background: rgba(0,224,150,0.10); border: 1px solid rgba(0,224,150,0.25); color: #00E096; }
+.sum-item-build-2 { background: rgba(0,87,255,0.10); border: 1px solid rgba(0,87,255,0.25); color: #00C2FF; }
+.sum-item-build-3 { background: rgba(255,140,0,0.10); border: 1px solid rgba(255,140,0,0.25); color: #FF8C00; }
+.sum-phase-label { font-size: 9px; letter-spacing: 1px; text-transform: uppercase; font-family: ‘Helvetica Neue’, sans-serif; opacity: 0.7; display: block; margin-bottom: 2px; }
+.sum-empty { font-size: 12px; color: rgba(255,255,255,0.25); font-family: ‘Helvetica Neue’, sans-serif; font-style: italic; padding: 8px 0; }
+
+/* PERSONALIZED EXPANSION */
+.expand-wrap { display: flex; gap: 24px; height: 100%; }
+.expand-left { flex: 1.4; display: flex; flex-direction: column; gap: 0; overflow-y: auto; }
+.expand-right { flex: 1; display: flex; flex-direction: column; gap: 10px; }
+.brand-rec { margin-bottom: 16px; }
+.brand-rec-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px; padding-bottom: 8px; border-bottom: 1px solid rgba(255,255,255,0.08); }
+.brand-rec-name { font-size: 13px; font-family: ‘Helvetica Neue’, sans-serif; font-weight: 700; color: #00C2FF; letter-spacing: 0.5px; }
+.brand-rec-hrs { font-size: 11px; font-family: ‘Helvetica Neue’, sans-serif; color: rgba(255,255,255,0.4); }
+.rec-item { display: flex; align-items: flex-start; gap: 10px; padding: 10px 12px; border-radius: 12px; margin-bottom: 8px; cursor: pointer; border: 1.5px solid transparent; transition: all 0.2s; }
+.rec-item:active { transform: scale(0.98); }
+.rec-item.sel-rec { border-color: rgba(0,194,255,0.4); background: rgba(0,194,255,0.06); }
+.rec-check { width: 20px; height: 20px; border-radius: 50%; border: 1.5px solid rgba(255,255,255,0.2); flex-shrink: 0; margin-top: 2px; display: flex; align-items: center; justify-content: center; font-size: 11px; transition: all 0.2s; }
+.rec-item.sel-rec .rec-check { background: #00C2FF; border-color: #00C2FF; color: #000; }
+.rec-body { flex: 1; }
+.rec-title { font-size: 13px; font-family: ‘Helvetica Neue’, sans-serif; font-weight: 700; color: #fff; margin-bottom: 3px; }
+.rec-why { font-size: 11px; font-family: ‘Helvetica Neue’, sans-serif; color: rgba(255,255,255,0.5); line-height: 1.4; }
+.rec-price { font-size: 11px; font-family: ‘Helvetica Neue’, sans-serif; font-weight: 700; padding: 3px 8px; border-radius: 10px; white-space: nowrap; flex-shrink: 0; }
+.rp-green { background: rgba(0,224,150,0.15); color: #00E096; }
+.rp-blue { background: rgba(0,87,255,0.2); color: #00C2FF; }
+.rp-orange { background: rgba(255,140,0,0.15); color: #FF8C00; }
+.rp-red { background: rgba(255,64,96,0.15); color: #FF6080; }
+.rp-purple { background: rgba(160,80,255,0.2); color: #C080FF; }
+.close-section { margin-bottom: 14px; }
+.close-section-title { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: #00C2FF; font-family: ‘Helvetica Neue’, sans-serif; margin-bottom: 8px; }
+.total-investment { background: linear-gradient(135deg, rgba(0,87,255,0.15), rgba(0,194,255,0.08)); border: 1.5px solid rgba(0,194,255,0.3); border-radius: 14px; padding: 16px; margin-bottom: 14px; text-align: center; }
+.ti-label { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: #00C2FF; font-family: ‘Helvetica Neue’, sans-serif; margin-bottom: 4px; }
+.ti-amount { font-size: 32px; color: #00C2FF; font-family: ‘Helvetica Neue’, sans-serif; font-weight: 700; text-shadow: 0 0 20px rgba(0,194,255,0.4); }
+.no-brands-msg { font-size: 13px; color: rgba(255,255,255,0.4); font-family: ‘Helvetica Neue’, sans-serif; font-style: italic; padding: 20px 0; }
 </style>
 
 </head>
@@ -318,91 +371,54 @@ body { background: #000000; color: #FFFFFF; font-family: 'Georgia', serif; min-h
 
 <div class="screen" id="s-expand">
   <div class="topbar">
-    <div class="topbar-logo" style="display:flex;align-items:center;"><img src="https://raw.githubusercontent.com/BreakoutAISolutions/Goplay/main/breakout_ai_logo_transparent_bg.png" style="width:36px;height:36px;border-radius:50%;margin-right:10px;vertical-align:middle;" alt="B"><span>Investment Menu</span></div>
-    <div class="topbar-brand">The Opportunity</div>
+    <div class="topbar-logo" style="display:flex;align-items:center;"><img src="https://raw.githubusercontent.com/BreakoutAISolutions/Goplay/main/breakout_ai_logo_transparent_bg.png" style="width:36px;height:36px;border-radius:50%;margin-right:10px;vertical-align:middle;" alt="B"><span>Your Proposal</span></div>
+    <div class="topbar-brand">Investment Menu</div>
   </div>
   <div class="progress-bar"><div class="progress-fill" style="width:95%"></div></div>
-  <div class="content">
+  <div class="content" style="display:flex;gap:24px;">
 
 ```
-<div style="display:flex;gap:32px;">
+<!-- LEFT: Personalized recommendations per brand -->
+<div style="flex:1.4;overflow-y:auto;">
+  <div class="q-label" style="margin-bottom:4px;">Based on what you told me</div>
+  <div style="font-size:13px;color:rgba(255,255,255,0.4);font-family:'Helvetica Neue',sans-serif;margin-bottom:18px;">Tap to confirm what matters most</div>
+  <div id="expand-brand-recs"></div>
+</div>
 
-  <!-- LEFT: Expansion Menu -->
-  <div style="flex:1.6;">
-    <div class="q-label">The Expansion Menu</div>
-    <div class="q-text" style="font-size:18px;margin-bottom:20px;">"Based on everything we just covered -- here is what the build looks like. Which of these feel most urgent?"</div>
+<!-- VERTICAL DIVIDER -->
+<div style="width:1px;background:rgba(255,255,255,0.08);flex-shrink:0;margin:4px 0;"></div>
 
-    <div class="exp-grid">
-      <div class="exp-card" onclick="togExp(this)">
-        <div class="exp-check">✓</div>
-        <div class="exp-title">Process Redesign</div>
-        <div class="exp-price price-green">$3K – $5K</div>
-        <div class="exp-desc">Map current workflows to future state. Eliminate the manual waste across all brands.</div>
-      </div>
-      <div class="exp-card" onclick="togExp(this)">
-        <div class="exp-check">✓</div>
-        <div class="exp-title">Automation Build</div>
-        <div class="exp-price price-blue">$1K – $3K</div>
-        <div class="exp-desc">Make.com / Zapier flows connecting your existing tools. Build, train, hand off.</div>
-      </div>
-      <div class="exp-card" onclick="togExp(this)">
-        <div class="exp-check">✓</div>
-        <div class="exp-title">Knowledge Systems</div>
-        <div class="exp-price price-purple">$3K+</div>
-        <div class="exp-desc">Custom AI trained on your content, brand voice, and processes. One-click outputs.</div>
-      </div>
-      <div class="exp-card" onclick="togExp(this)">
-        <div class="exp-check">✓</div>
-        <div class="exp-title">Custom Workflows</div>
-        <div class="exp-price price-orange">$3K – $5K</div>
-        <div class="exp-desc">Prompts, templates, and one-click operations built for your specific brands.</div>
-      </div>
-      <div class="exp-card" onclick="togExp(this)">
-        <div class="exp-check">✓</div>
-        <div class="exp-title">Smart CRM Build</div>
-        <div class="exp-price price-blue">$2K – $4K</div>
-        <div class="exp-desc">Unified CRM across all brands. Pipelines, follow-up sequences, lead tracking.</div>
-      </div>
-      <div class="exp-card" onclick="togExp(this)">
-        <div class="exp-check">✓</div>
-        <div class="exp-title">Full Implementation</div>
-        <div class="exp-price price-red">$5K – $10K+</div>
-        <div class="exp-desc">Custom AI agents and full workflow automation across the entire agency.</div>
-      </div>
-    </div>
+<!-- RIGHT: 3 Closing Questions + Total -->
+<div style="flex:1;display:flex;flex-direction:column;gap:0;overflow-y:auto;">
+
+  <div class="total-investment">
+    <div class="ti-label">Selected Investment</div>
+    <div class="ti-amount" id="selected-total">$0</div>
+    <div style="font-size:11px;color:rgba(255,255,255,0.4);font-family:'Helvetica Neue',sans-serif;margin-top:4px;">tap items to include</div>
   </div>
 
-  <!-- VERTICAL DIVIDER -->
-  <div style="width:1px;background:rgba(255,255,255,0.10);flex-shrink:0;margin:8px 0;"></div>
+  <div class="close-section">
+    <div class="close-section-title">Most urgent?</div>
+    <div class="closing-q" onclick="selCQ(this,'urgent')"><div class="cq-text">Get everything organized first</div></div>
+    <div class="closing-q" onclick="selCQ(this,'urgent')"><div class="cq-text">Start generating leads immediately</div></div>
+    <div class="closing-q" onclick="selCQ(this,'urgent')"><div class="cq-text">Stop losing deals in follow-up</div></div>
+    <div class="closing-q" onclick="selCQ(this,'urgent')"><div class="cq-text">Get social media consistent</div></div>
+    <div class="closing-q" onclick="selCQ(this,'urgent')"><div class="cq-text">Full build -- all of it</div></div>
+  </div>
 
-  <!-- RIGHT: 3 Closing Questions -->
-  <div style="flex:1;display:flex;flex-direction:column;gap:10px;padding-top:8px;">
-    <div class="q-label">3 Closing Questions</div>
-    <div style="font-size:13px;color:rgba(255,255,255,0.5);font-family:'Helvetica Neue',sans-serif;margin-bottom:8px;">Tap her answer</div>
+  <div class="close-section">
+    <div class="close-section-title">DIY or done for you?</div>
+    <div class="closing-q" onclick="selCQ(this,'diy')"><div class="cq-text">Done for me completely</div></div>
+    <div class="closing-q" onclick="selCQ(this,'diy')"><div class="cq-text">Teach me, I'll run it</div></div>
+    <div class="closing-q" onclick="selCQ(this,'diy')"><div class="cq-text">Done for me, then hand off</div></div>
+  </div>
 
-    <div style="margin-bottom:6px;">
-      <div style="font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:#00C2FF;font-family:'Helvetica Neue',sans-serif;margin-bottom:8px;">Most urgent for you?</div>
-      <div class="closing-q" onclick="selCQ(this,'urgent')"><div class="cq-text">Get everything organized first</div></div>
-      <div class="closing-q" onclick="selCQ(this,'urgent')"><div class="cq-text">Start generating leads immediately</div></div>
-      <div class="closing-q" onclick="selCQ(this,'urgent')"><div class="cq-text">Stop losing deals in follow-up</div></div>
-      <div class="closing-q" onclick="selCQ(this,'urgent')"><div class="cq-text">Get social media consistent</div></div>
-      <div class="closing-q" onclick="selCQ(this,'urgent')"><div class="cq-text">All of it -- I need the full build</div></div>
-    </div>
-
-    <div style="margin-bottom:6px;">
-      <div style="font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:#00C2FF;font-family:'Helvetica Neue',sans-serif;margin-bottom:8px;">DIY or want help?</div>
-      <div class="closing-q" onclick="selCQ(this,'diy')"><div class="cq-text">I want it done for me</div></div>
-      <div class="closing-q" onclick="selCQ(this,'diy')"><div class="cq-text">Teach me and I'll run it</div></div>
-      <div class="closing-q" onclick="selCQ(this,'diy')"><div class="cq-text">Done for me first, then hand off</div></div>
-    </div>
-
-    <div>
-      <div style="font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:#00C2FF;font-family:'Helvetica Neue',sans-serif;margin-bottom:8px;">Your timeline?</div>
-      <div class="closing-q" onclick="selCQ(this,'timeline')"><div class="cq-text">ASAP -- yesterday</div></div>
-      <div class="closing-q" onclick="selCQ(this,'timeline')"><div class="cq-text">Next 30 days</div></div>
-      <div class="closing-q" onclick="selCQ(this,'timeline')"><div class="cq-text">Next 60-90 days</div></div>
-      <div class="closing-q" onclick="selCQ(this,'timeline')"><div class="cq-text">When budget is confirmed</div></div>
-    </div>
+  <div class="close-section">
+    <div class="close-section-title">Timeline?</div>
+    <div class="closing-q" onclick="selCQ(this,'timeline')"><div class="cq-text">ASAP</div></div>
+    <div class="closing-q" onclick="selCQ(this,'timeline')"><div class="cq-text">Next 30 days</div></div>
+    <div class="closing-q" onclick="selCQ(this,'timeline')"><div class="cq-text">Next 60-90 days</div></div>
+    <div class="closing-q" onclick="selCQ(this,'timeline')"><div class="cq-text">When budget is confirmed</div></div>
   </div>
 
 </div>
@@ -964,38 +980,206 @@ function saveBrandData() {
 
   document.getElementById('summary-topbar-text').innerText = curBrand;
 
-  // Build summary card
-  var html = '<div class="summary-card">';
-  html += '<div class="sc-title">' + curBrand + '</div>';
-  html += '<div class="sc-row"><div class="sc-key">Hrs/week</div><div class="sc-val" style="color:#00C2FF;font-weight:700">' + totalHrs + ' hrs/wk</div></div>';
+  // BUILD DYNAMIC SUMMARY
+  var nameParts = curBrand.split(' ');
+  var lastWord = nameParts.pop();
+  var firstWords = nameParts.join(' ');
 
+  var h = '<div class="sum-wrap">';
+
+  // HEADER -- brand name + hours
+  h += '<div class="sum-header">';
+  h += '<div class="sum-brand-name">' + (firstWords ? firstWords + '<br><span>' + lastWord + '</span>' : '<span>' + lastWord + '</span>') + '</div>';
+  h += '<div class="sum-hrs-badge"><div class="sum-hrs-num">' + totalHrs + '</div><div class="sum-hrs-label">hrs / week</div></div>';
+  h += '</div>';
+
+  // THREE COLUMNS
+  h += '<div class="sum-cols">';
+
+  // COL 1 -- Pain Points
+  h += '<div class="sum-col">';
+  h += '<div class="sum-col-title t-pain">Pain Points / Needs</div>';
+  h += '<div class="sum-items">';
   if (pains.length) {
-    html += '<div class="sc-row" style="align-items:flex-start"><div class="sc-key">Pain points</div><div class="sc-val">';
-    for (var i = 0; i < pains.length; i++) { html += '<span class="tag tb">' + pains[i] + '</span>'; }
-    html += '</div></div>';
+    for (var i = 0; i < pains.length; i++) {
+      h += '<div class="sum-item sum-item-pain">' + pains[i] + '</div>';
+    }
+  } else {
+    h += '<div class="sum-empty">None selected</div>';
   }
+  h += '</div></div>';
+
+  // COL 2 -- Tools
+  h += '<div class="sum-col">';
+  h += '<div class="sum-col-title t-tools">Current Tools</div>';
+  h += '<div class="sum-items">';
   if (tools.length) {
-    html += '<div class="sc-row" style="align-items:flex-start"><div class="sc-key">Tools</div><div class="sc-val">';
-    for (var i = 0; i < tools.length; i++) { html += '<span class="tag tb">' + tools[i] + '</span>'; }
-    html += '</div></div>';
+    for (var i = 0; i < tools.length; i++) {
+      h += '<div class="sum-item sum-item-tool">' + tools[i] + '</div>';
+    }
+  } else {
+    h += '<div class="sum-empty">None confirmed</div>';
   }
+  h += '</div></div>';
+
+  // COL 3 -- Build Scope grouped by phase
+  h += '<div class="sum-col">';
+  h += '<div class="sum-col-title t-build">Build Scope</div>';
+  h += '<div class="sum-items">';
   if (builds.length) {
-    // Group by phase
     var p1b = [], p2b = [], p3b = [];
     for (var i = 0; i < builds.length; i++) {
       if (builds[i].phase === 1) p1b.push(builds[i].text);
       else if (builds[i].phase === 2) p2b.push(builds[i].text);
       else p3b.push(builds[i].text);
     }
-    html += '<div class="sc-row" style="align-items:flex-start"><div class="sc-key">Build scope</div><div class="sc-val">';
-    for (var i = 0; i < p1b.length; i++) { html += '<span class="tag tg">' + p1b[i] + '</span>'; }
-    for (var i = 0; i < p2b.length; i++) { html += '<span class="tag tb">' + p2b[i] + '</span>'; }
-    for (var i = 0; i < p3b.length; i++) { html += '<span class="tag to">' + p3b[i] + '</span>'; }
-    html += '</div></div>';
+    if (p1b.length) {
+      for (var i = 0; i < p1b.length; i++) {
+        h += '<div class="sum-item sum-item-build-1"><span class="sum-phase-label">Phase 1</span>' + p1b[i] + '</div>';
+      }
+    }
+    if (p2b.length) {
+      for (var i = 0; i < p2b.length; i++) {
+        h += '<div class="sum-item sum-item-build-2"><span class="sum-phase-label">Phase 2</span>' + p2b[i] + '</div>';
+      }
+    }
+    if (p3b.length) {
+      for (var i = 0; i < p3b.length; i++) {
+        h += '<div class="sum-item sum-item-build-3"><span class="sum-phase-label">Phase 3</span>' + p3b[i] + '</div>';
+      }
+    }
+  } else {
+    h += '<div class="sum-empty">None selected</div>';
   }
-  html += '</div>';
-  document.getElementById('summary-card-content').innerHTML = html;
+  h += '</div></div>';
+
+  h += '</div>'; // end sum-cols
+  h += '</div>'; // end sum-wrap
+
+  document.getElementById('summary-card-content').innerHTML = h;
   updateSessionSummary();
+}
+
+
+// ============================================================
+// RECOMMENDATION ENGINE
+// ============================================================
+var recMap = {
+  'No CRM in place':                { title: 'Smart CRM Build', why: 'No system tracking contacts or deals', price: '$2K-$4K', priceClass: 'rp-blue', min: 2000, max: 4000 },
+  'No CRM at all':                  { title: 'Smart CRM Build', why: 'Starting from zero on contact management', price: '$2K-$4K', priceClass: 'rp-blue', min: 2000, max: 4000 },
+  'Leads falling through cracks':   { title: 'Lead Pipeline & Follow-Up', why: 'Automated sequences so no lead goes cold', price: '$1K-$3K', priceClass: 'rp-green', min: 1000, max: 3000 },
+  'Sponsorship outreach is manual': { title: 'Sponsorship Outreach System', why: 'Automated outreach and follow-up for sponsors', price: '$1K-$2K', priceClass: 'rp-green', min: 1000, max: 2000 },
+  'No follow-up system':            { title: 'Automated Follow-Up Sequences', why: 'Every lead gets touched automatically', price: '$1K-$2K', priceClass: 'rp-green', min: 1000, max: 2000 },
+  'Social media inconsistent':      { title: 'Social Content Automation', why: 'Consistent posting across all brands', price: '$1K-$2K', priceClass: 'rp-blue', min: 1000, max: 2000 },
+  'Too much manual data entry':     { title: 'Process Redesign + Automation', why: 'Eliminate manual work with Make flows', price: '$1K-$3K', priceClass: 'rp-green', min: 1000, max: 3000 },
+  'Proposals take too long':        { title: 'Proposal Generation System', why: 'One-click proposals using your brand voice', price: '$1K-$2K', priceClass: 'rp-purple', min: 1000, max: 2000 },
+  "Can't track what's working":     { title: 'Analytics Dashboard', why: 'See performance across all brands in one view', price: '$1K-$2K', priceClass: 'rp-blue', min: 1000, max: 2000 },
+  'Email follow-up falling behind': { title: 'Email Automation Build', why: 'Sequences running automatically on schedule', price: '$1K-$2K', priceClass: 'rp-green', min: 1000, max: 2000 },
+  'No lead generation system':      { title: 'Lead Generation System', why: 'Consistent inbound pipeline for this brand', price: '$2K-$4K', priceClass: 'rp-blue', min: 2000, max: 4000 },
+  'No lead capture system':         { title: 'Lead Capture + Nurture', why: 'Capture interest from Wix into a CRM pipeline', price: '$1K-$2K', priceClass: 'rp-green', min: 1000, max: 2000 },
+  'No sponsorship pipeline':        { title: 'Sponsorship Pipeline Build', why: 'Full CRM pipeline for sponsor management', price: '$1K-$3K', priceClass: 'rp-blue', min: 1000, max: 3000 },
+  'Audience not being built yet':   { title: 'Audience Building Campaign', why: 'Build email list and social following pre-event', price: '$1K-$2K', priceClass: 'rp-green', min: 1000, max: 2000 },
+  'Lead generation':                { title: 'Lead Generation System', why: 'Consistent new client pipeline', price: '$2K-$4K', priceClass: 'rp-blue', min: 2000, max: 4000 },
+  'Appointment booking automation': { title: 'Booking Automation', why: 'Automated scheduling and reminders', price: '$1K-$2K', priceClass: 'rp-green', min: 1000, max: 2000 },
+  'No private community space for members': { title: 'Community Space Build', why: 'Private member community inside Circle.so', price: '$2K-$3K', priceClass: 'rp-blue', min: 2000, max: 3000 },
+  'Member onboarding is manual':    { title: 'Onboarding Automation', why: 'Automated welcome sequences for new members', price: '$1K-$2K', priceClass: 'rp-green', min: 1000, max: 2000 },
+  'Client has no visibility into engagement': { title: 'Client Dashboard', why: 'Real-time engagement view for Estate-Minder client', price: '$1K-$2K', priceClass: 'rp-purple', min: 1000, max: 2000 },
+  'No customer-facing web app':     { title: 'Customer Web App', why: 'Member portal for Estate-Minder users', price: '$5K-$10K', priceClass: 'rp-red', min: 5000, max: 10000 },
+  'Circle.so not fully configured': { title: 'Circle.so Full Setup', why: 'Configure courses, community, and email properly', price: '$1K-$2K', priceClass: 'rp-blue', min: 1000, max: 2000 },
+  'Missed calls after hours = missed revenue': { title: 'AI Phone Agent', why: 'Never miss a bond call -- 24/7 coverage', price: '$3K-$5K', priceClass: 'rp-red', min: 3000, max: 5000 },
+  'No AI phone agent':              { title: 'AI Phone Agent', why: '24/7 call handling and lead qualification', price: '$3K-$5K', priceClass: 'rp-red', min: 3000, max: 5000 },
+  'No social media presence':       { title: 'Social Media Build-Out', why: 'Reddit, TikTok, YouTube Shorts presence', price: '$1K-$2K', priceClass: 'rp-blue', min: 1000, max: 2000 },
+  'No lead qualification system':   { title: 'Lead Qualification Automation', why: 'Qualify and route bond leads automatically', price: '$1K-$2K', priceClass: 'rp-green', min: 1000, max: 2000 }
+};
+
+function buildExpansionRecs() {
+  selectedMin = 0; selectedMax = 0;
+  var keys = Object.keys(sessionData);
+  var container = document.getElementById('expand-brand-recs');
+  if (!keys.length) {
+    container.innerHTML = '<div class="no-brands-msg">Complete discovery for at least one brand first.</div>';
+    return;
+  }
+
+  var html = '';
+  // Track unique recs per brand to avoid duplicates within same brand
+  for (var i = 0; i < keys.length; i++) {
+    var d = sessionData[keys[i]];
+    var seen = {};
+    var recs = [];
+
+    // Generate recs from pain points
+    for (var j = 0; j < d.pains.length; j++) {
+      var pain = d.pains[j];
+      if (recMap[pain] && !seen[recMap[pain].title]) {
+        seen[recMap[pain].title] = true;
+        recs.push(recMap[pain]);
+      }
+    }
+
+    // Always add retainer for any brand
+    var retainerTitle = d.name + ' Monthly Retainer';
+    if (!seen[retainerTitle]) {
+      seen[retainerTitle] = true;
+      var retainerPrice = keys[i] === 'atc' ? '$800-$1,200' : keys[i] === 'em' ? '$500-$800' : '$300-$500';
+      var retainerMin = keys[i] === 'atc' ? 800 : keys[i] === 'em' ? 500 : 300;
+      var retainerMax = keys[i] === 'atc' ? 1200 : keys[i] === 'em' ? 800 : 500;
+      recs.push({ title: retainerTitle, why: 'Ongoing management, optimization, and support', price: retainerPrice + '/mo', priceClass: 'rp-purple', min: retainerMin, max: retainerMax, monthly: true });
+    }
+
+    if (!recs.length) continue;
+
+    html += '<div class="brand-rec">';
+    html += '<div class="brand-rec-header">';
+    html += '<div class="brand-rec-name">' + d.name + '</div>';
+    html += '<div class="brand-rec-hrs">' + d.hrs + ' hrs/wk identified</div>';
+    html += '</div>';
+
+    for (var j = 0; j < recs.length; j++) {
+      var r = recs[j];
+      var dataMin = r.min || 0;
+      var dataMax = r.max || 0;
+      html += '<div class="rec-item" onclick="togRec(this,' + dataMin + ',' + dataMax + ')">';
+      html += '<div class="rec-check">✓</div>';
+      html += '<div class="rec-body">';
+      html += '<div class="rec-title">' + r.title + '</div>';
+      html += '<div class="rec-why">' + r.why + '</div>';
+      html += '</div>';
+      html += '<div class="rec-price ' + r.priceClass + '">' + r.price + '</div>';
+      html += '</div>';
+    }
+
+    html += '</div>';
+  }
+
+  container.innerHTML = html;
+  updateSelectedTotal();
+}
+
+var selectedMin = 0;
+var selectedMax = 0;
+
+function togRec(el, min, max) {
+  if (el.classList.contains('sel-rec')) {
+    el.classList.remove('sel-rec');
+    selectedMin -= min;
+    selectedMax -= max;
+  } else {
+    el.classList.add('sel-rec');
+    selectedMin += min;
+    selectedMax += max;
+  }
+  updateSelectedTotal();
+}
+
+function updateSelectedTotal() {
+  var el = document.getElementById('selected-total');
+  if (!el) return;
+  if (selectedMin === 0 && selectedMax === 0) {
+    el.innerText = '$0';
+  } else {
+    el.innerText = '$' + (selectedMin/1000).toFixed(0) + 'K - $' + (selectedMax/1000).toFixed(0) + 'K';
+  }
 }
 
 // ============================================================
@@ -1013,9 +1197,9 @@ function tryWrapUp() {
   }
   if (missing.length > 0) {
     var msg = 'You still have ' + missing.length + ' brand(s) left:\n\n' + missing.join('\n') + '\n\nWrap up anyway?';
-    if (confirm(msg)) { go('s-expand'); }
+    if (confirm(msg)) { buildExpansionRecs(); go('s-expand'); }
   } else {
-    go('s-expand');
+    buildExpansionRecs(); go('s-expand');
   }
 }
 
